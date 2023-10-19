@@ -7,6 +7,8 @@ import {
 import Home from './pages/Home/Home';
 import OnBoard from './pages/OnBoard/OnBoard';
 import Welcome from './pages/Welcome/Welcome';
+import Login from './pages/Login';
+import Register from './pages/Register';
 
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
           <Route exact path="/" element={<Home />} />
           <Route path="/onboard" element={<OnBoard />} />
           <Route path="/welcome" element={<Welcome />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/register" element={<Register />} />
         </Routes>
       </Router>
     </div>
