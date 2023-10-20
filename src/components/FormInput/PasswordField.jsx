@@ -2,7 +2,7 @@ import * as React from 'react';
 import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 import { Button } from '@mui/base/Button';
-import { Input as BaseInput} from '@mui/base/Input';
+import { Input as BaseInput, inputClasses } from '@mui/base/Input';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff';
 import { styled } from '@mui/system';
@@ -64,6 +64,7 @@ export default function PasswordField() {
     <Box>
       <Input
         id="outlined-adornment-password"
+        placeholder="Enter Password"
         type={values.showPassword ? 'text' : 'password'}
         value={values.password}
         onChange={handleChange('password')}
@@ -83,11 +84,9 @@ export default function PasswordField() {
   );
 }
 
-
-
 const InputRoot = styled('div')(
-	({ theme }) => `
-	width: 295px;
+  ({ theme }) => `
+  width: 295px;
 	font-size: 16px;
 	background: white;
 	font-weight: 400;
@@ -95,15 +94,20 @@ const InputRoot = styled('div')(
 	color: ${gray[500]};
 	border: 1px solid ${gray[500]};
 	border-radius: ${borderRadius[2]};
-	padding: 12px 12px;
+	padding: 4px 12px;
 	transition: ${transition};
+  font-weight: 400;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &:hover {
     background: ${red[100]}
-    outline: 1px solid ${red[300]}
+    border-color: ${red[300]};
   }
 
-  &:focus {
+  &.${inputClasses.focused} {
     border-color: ${red[300]};
   }
 
@@ -116,16 +120,15 @@ const InputRoot = styled('div')(
 
 const InputElement = styled('input')(
   ({ theme }) => `
-  font-size: 0.875rem;
+  font-size: 16px;
   font-family: inherit;
   font-weight: 400;
   line-height: 1.5;
   flex-grow: 1;
-  color: ${gray[500]};
+  color: ${gray[500]}
   background: inherit;
   border: none;
   border-radius: inherit;
-  padding: 12px 12px;
   outline: 0;
 `,
 );
@@ -138,6 +141,7 @@ const IconButton = styled(Button)(
   border: none;
   background: inherit;
   cursor: pointer;
+  color: ${gray[500]};
   `,
 );
 

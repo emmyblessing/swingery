@@ -1,12 +1,12 @@
 import React from 'react'
 import { Box } from '@mui/system'
-import LoginPage from '../../components/Login'
+import RegisterPage from '../../components/Register'
 
 const Register = () => {
   return (
     <div>
       <Box>
-        <LoginPage />
+        <RegisterPage />
       </Box>
     </div>
   )

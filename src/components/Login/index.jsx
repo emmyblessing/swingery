@@ -48,7 +48,7 @@ const LoginPage = () => {
           alignItems: 'center',
         }}>
           <Box sx={{marginLeft: '-150px'}}>
-            <Typography variant='p' fontSize={16} fontWeight="bold">
+            <Typography variant='p' fontSize={16} fontWeight="bold" color="#263238">
               Email/ Mobile Number
             </Typography>
           </Box>
@@ -57,44 +57,75 @@ const LoginPage = () => {
           </Box>
 
           <Box mt={2} sx={{marginLeft: '-250px'}}>
-            <Typography variant='p' fontSize={16} fontWeight="bold">
+            <Typography variant='p' fontSize={16} fontWeight="bold" color="#263238">
               Password
             </Typography>
           </Box>
           <Box mt={1}>
             <PasswordField />
           </Box>
-          <Box mt={1}>
-            <Link href="/" >
+          <Box mt={2}>
+            <Link href="/" sx={{
+              color: 'rgba(27, 29, 37, 0.64)',
+              textDecoration: 'none',
+              fontWeight: 'bold',
+              fontSize: '16px',
+            }}>
               Forgot password?
             </Link>
           </Box>
-        </Box>
-        <Box
-          mt={5}
-          mb={2}
-          sx={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-          }}
-        >
-          <Button size="320px" label="Login" type="Submit" />
-        </Box>
 
-        <Box sx={{
-          display: 'flex',
-          justifyContent: 'space-between',
-          padding: '0 20px',
-        }}>
-          <Box mt={2}>
-            <img src={ Google } alt='Swingery logo' />
+          <Box
+            mt={5}
+            mb={2}
+            sx={{
+              display: 'flex',
+              flexDirection: 'column',
+              alignItems: 'center',
+            }}
+          >
+            <Button size="320px" label="Login" type="Submit" />
           </Box>
-          <Box mt={2}>
-            <img src={ Facebook } alt='Swingery logo' />
+          
+          <Box mt={2} sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItem: 'center',
+          }}>
+            <Box color="#BFBFBF">
+              ___________________
+            </Box>
+            <Box m={1}>
+              <Typography variant='h2' fontSize={16} fontWeight="bold" color="#BFBFBF">
+                OR
+              </Typography>
+            </Box>
+            <Box color="#BFBFBF">
+              ___________________
+            </Box>
           </Box>
-          <Box mt={2}>
-            <img src={ Apple } alt='Swingery logo' />
+          <Box mt={2} sx={{
+            display: 'flex',
+            justifyContent: 'space-between',
+          }}>
+            <Box mr={5}>
+              <img src={ Google } alt='Swingery logo' />
+            </Box>
+            <Box mr={5}>
+              <img src={ Facebook } alt='Swingery logo' />
+            </Box>
+            <Box>
+              <img src={ Apple } alt='Swingery logo' />
+            </Box>
+          </Box>
+          <Box mt={2} mb={2}>
+            <Link href="/register" sx={{
+              textDecoration: 'none',
+              color: '#3B3237',
+              fontSize: '16px',
+            }}>
+              Don’t have an account? <b>Register</b>
+            </Link>
           </Box>
         </Box>
       </Box>

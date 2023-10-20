@@ -1,6 +1,6 @@
-import { Checkbox, FormControlLabel } from '@mui/material'
 import React from 'react'
-import { green, red } from '../../assets/js/customStyles'
+import { Checkbox, FormControlLabel } from '@mui/material'
+import { gray, red } from '../../assets/js/customStyles'
 
 const FormCheckField = (props) => {
 	return (
@@ -8,14 +8,14 @@ const FormCheckField = (props) => {
 			<FormControlLabel
 				sx={{
 					marginTop: '20px',
-					'& .MuiFormControlLabel-label': { fontSize: 13, color: green[600] },
+					'& .MuiFormControlLabel-label': { fontSize: 13, color: red[600] },
 				}}
 				control={
 					<Checkbox
 						sx={{
 							'& .MuiSvgIcon-root': {
 								fontSize: 38,
-								color: props.isinvalid ? red[500] : green[500],
+								color: props.isinvalid ? gray[500] : red[500],
 							},
 						}}
 					/>
