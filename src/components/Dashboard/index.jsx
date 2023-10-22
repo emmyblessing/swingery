@@ -8,6 +8,10 @@ import { Tab as BaseTab, tabClasses } from '@mui/base/Tab';
 import { Box, Paper } from '@mui/material';
 import { red, gray } from '../../assets/js/customStyles';
 import DashMain from '../DashMain';
+import Profile from '../Profile';
+import Love from '../Love';
+import Favorite from '../Favorite';
+import Messages from '../Messages';
 
 const vectorOne = (
   <svg xmlns="http://www.w3.org/2000/svg" width="28" height="26" viewBox="0 0 28 26" fill="none">
@@ -49,22 +53,22 @@ export default function DashboardPage() {
       </TabPanel>
       <TabPanel value={2}>
         <Box>
-          Second page
+          <Love />
         </Box>
       </TabPanel>
       <TabPanel value={3}>
         <Box>
-          Third page
+          <Favorite />
         </Box>
       </TabPanel>
       <TabPanel value={4}>
         <Box>
-          Fourth page
+          <Messages />
         </Box>
       </TabPanel>
       <TabPanel value={5}>
         <Box>
-          Fifth page
+          <Profile />
         </Box>
       </TabPanel>
       

@@ -164,9 +164,46 @@ const MatchSlide = () => {
             </div>
           </div>
         </SwiperSlide>
-        
-        <SwiperSlide className="mySwiper-slide"></SwiperSlide>
-        <SwiperSlide className="mySwiper-slide"></SwiperSlide>
+        <SwiperSlide className="mySwiper-slide">
+          <div className='relative'>
+            <img src={MatchOne} alt='Match One'/>
+            <div className='flex justify-center'>
+              <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
+                <p className='font-bold mb-[4px]'>70% Match</p>
+              </div>
+            </div>
+            <div className='absolute top-52 text-white font-bold'>
+              <div className='px-4'>
+                <h3 className='leading-none'>Sara Willaims <br /> 
+                  <span className='text-sm'>Califonia, USA ( 54 km )</span>
+                </h3>
+              </div>
+              <div className='mt-2 flex justify-center'>
+                <IconLayer />
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
+        <SwiperSlide className="mySwiper-slide">
+          <div className='relative'>
+            <img src={MatchTwo} alt='Match Two'/>
+            <div className='flex justify-center'>
+              <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
+                <p className='font-bold mb-[4px]'>70% Match</p>
+              </div>
+            </div>
+            <div className='absolute top-52 text-white font-bold'>
+              <div className='px-4'>
+                <h3 className='leading-none'>Grace Williams <br /> 
+                  <span className='text-sm'>Califonia, USA ( 54 km )</span>
+                </h3>
+              </div>
+              <div className='mt-2 flex justify-center'>
+                <IconLayer />
+              </div>
+            </div>
+          </div>
+        </SwiperSlide>
       </Swiper>
       </Box>
     </div>

@@ -25,15 +25,15 @@ const Stories = () => {
             <div>
               <ul >
                 <li className="flex flex-col items-center">
-                  <div class="relative rounded-full p-0.5">
-                    <Link href="/" class="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
-                      <img src={AvatarOne} class="rounded-full" width="70" alt="Story One"/>
+                  <div className="relative rounded-full p-0.5">
+                    <Link href="/" className="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
+                      <img src={AvatarOne} className="rounded-full" width="70" alt="Story One"/>
                     </Link>
                     <button className="absolute bg-red-700 text-white text-xl font-medium w-7 h-7 rounded-full  bottom-0 right-0.5 border-2 border-white flex justify-center items-center font-mono hover:bg-red-900 focus:outline-none">
                       <div className="transform -translate-y-px font-bold">+</div>
                     </button>
                   </div>
-                  <span class="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">My Story</span>
+                  <span className="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">My Story</span>
                 </li>
               </ul>
             </div>
@@ -41,13 +41,13 @@ const Stories = () => {
           <SwiperSlide>
             <div>
               <ul>
-                <li class="flex flex-col items-center">
-                  <div class="rounded-full bg-red-700 p-0.5">
-                    <Link href="/" class="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
-                      <img src={AvatarTwo} class="rounded-full" width="70" alt='StoryOne'/>
+                <li className="flex flex-col items-center">
+                  <div className="rounded-full bg-red-700 p-0.5">
+                    <Link href="/" className="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
+                      <img src={AvatarTwo} className="rounded-full" width="70" alt='StoryOne'/>
                     </Link>
                   </div>
-                    <span class="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Selena</span>
+                    <span className="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Selena</span>
                 </li>
               </ul>
             </div>
@@ -55,13 +55,13 @@ const Stories = () => {
           <SwiperSlide>
             <div>
               <ul>
-                <li class="flex flex-col items-center">
-                  <div class="rounded-full bg-red-700 p-0.5">
-                  <Link href="/" class="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
-                      <img src="https://i.imgur.com/eMaYwXn.jpg" class="rounded-full" width="70" alt='Story Two' />
+                <li className="flex flex-col items-center">
+                  <div className="rounded-full bg-red-700 p-0.5">
+                  <Link href="/" className="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
+                    <img src="https://i.imgur.com/eMaYwXn.jpg" className="rounded-full" width="70" alt='Story Two' />
                   </Link>
                   </div>
-                  <span class="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Clara</span>
+                  <span className="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Clara</span>
                 </li>
               </ul>
             </div>
@@ -69,13 +69,13 @@ const Stories = () => {
           <SwiperSlide>
             <div className="mx-auto">
               <ul>
-                <li class="flex flex-col items-center">
-                  <div class="rounded-full bg-red-700 p-0.5">
-                  <Link href="/" class="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
-                    <img src="https://i.imgur.com/zQZSWrt.jpg" class="rounded-full" width="70" alt='Story Three'/>
+                <li className="flex flex-col items-center">
+                  <div className="rounded-full bg-red-700 p-0.5">
+                  <Link href="/" className="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
+                    <img src="https://i.imgur.com/zQZSWrt.jpg" className="rounded-full" width="70" alt='Story Three'/>
                   </Link>
                   </div>
-                    <span class="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Fabian</span>
+                    <span className="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Fabian</span>
                 </li>
               </ul>
             </div>
@@ -83,13 +83,13 @@ const Stories = () => {
           <SwiperSlide>
             <div className="mx-auto">
               <ul>
-                <li class="flex flex-col items-center">
-                  <div class="rounded-full bg-red-700 p-0.5">
-                  <Link href="/" class="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
-                    <img src="https://i.imgur.com/uIgDDDd.jpg" class="rounded-full" width="70" alt="Story Five"/>
+                <li className="flex flex-col items-center">
+                  <div className="rounded-full bg-red-700 p-0.5">
+                  <Link href="/dashboard" className="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
+                    <img src="https://i.imgur.com/uIgDDDd.jpg" className="rounded-full" width="70" alt="Story Five"/>
                   </Link>
                   </div>
-                    <span class="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Fabian</span>
+                    <span className="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Fabian</span>
                 </li>
               </ul>
             </div>
@@ -97,13 +97,13 @@ const Stories = () => {
           <SwiperSlide>
             <div className="mx-auto">
               <ul>
-                <li class="flex flex-col items-center">
-                  <div class="rounded-full bg-red-700 p-0.5">
-                  <Link href="/" class="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
-                    <img src="https://i.imgur.com/tT8rjKC.jpg" class="rounded-full" width="70" alt="Story Six"/>
+                <li className="flex flex-col items-center">
+                  <div className="rounded-full bg-red-700 p-0.5">
+                  <Link href="/dashboard" className="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
+                    <img src="https://i.imgur.com/tT8rjKC.jpg" className="rounded-full" width="70" alt="Story Six"/>
                   </Link>
                   </div>
-                    <span class="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Fabian</span>
+                    <span className="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Fabian</span>
                 </li>
               </ul>
             </div>
@@ -111,13 +111,13 @@ const Stories = () => {
           <SwiperSlide>
             <div className="mx-auto">
               <ul>
-                <li class="flex flex-col items-center">
-                  <div class="rounded-full bg-red-700 p-0.5">
-                  <Link href="/" class="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
-                    <img src="https://i.imgur.com/aq39RMA.jpg" class="rounded-full" width="70" alt='StoryOne'/>
+                <li className="flex flex-col items-center">
+                  <div className="rounded-full bg-red-700 p-0.5">
+                  <Link href="/" className="bg-white p-0.5 rounded-full block transform transition hover:rotate-6">
+                    <img src="https://i.imgur.com/aq39RMA.jpg" className="rounded-full" width="70" alt='StoryOne'/>
                   </Link>
                   </div>
-                    <span class="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Fabian</span>
+                    <span className="text-sm text-center w-16 mt-2 overflow-hidden overflow-ellipsis">Fabian</span>
                 </li>
               </ul>
             </div>

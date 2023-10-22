@@ -14,6 +14,7 @@ import Interest from './pages/Interest';
 import Gender from './pages/Gender';
 import Looking from './pages/Looking';
 import Dashboard from './pages/Dashboard';
+import Chats from './pages/Chats';
 
 
 function App() {
@@ -31,6 +32,7 @@ function App() {
           <Route path="/gender" element={<Gender />} />
           <Route path="/looking" element={<Looking />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/chats" element={<Chats />} />
         </Routes>
       </Router>
     </div>

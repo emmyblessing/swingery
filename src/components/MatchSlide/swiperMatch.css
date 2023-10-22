@@ -14,11 +14,11 @@
 }
 
 .mySwiper-slide:nth-child(1n) {
-  background-color: rgb(0, 140, 255);
+  background-color: rgb(206, 17, 17);
 }
 
 .mySwiper-slide:nth-child(2n) {
-  background-color: rgb(206, 17, 17);
+  background-color: rgb(0, 140, 255);
 }
 
 .mySwiper-slide:nth-child(3n) {
@@ -49,7 +49,7 @@
   background-color: rgb(218, 12, 218);
 }
 
-.swiper-slide:nth-child(10n) {
+.mySwiper-slide:nth-child(10n) {
   background-color: rgb(54, 94, 77);
 }
 
