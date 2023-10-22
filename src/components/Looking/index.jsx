@@ -57,7 +57,7 @@ const LookingPage = () => {
               alignItems: 'center',
             }}
           >
-            <Link href="/">
+            <Link href="/dashboard">
               <Button size="320px" label="Finish" type="submit"/>
             </Link>
           </Box>

@@ -13,6 +13,7 @@ import Verify from './pages/Verify';
 import Interest from './pages/Interest';
 import Gender from './pages/Gender';
 import Looking from './pages/Looking';
+import Dashboard from './pages/Dashboard';
 
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
           <Route path="/interest" element={<Interest />} />
           <Route path="/gender" element={<Gender />} />
           <Route path="/looking" element={<Looking />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </div>
