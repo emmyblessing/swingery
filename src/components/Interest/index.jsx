@@ -75,7 +75,7 @@ const InterestPage = () => {
               
               <Box mr={1}>
                 <Chip
-                  avatar={<Avatar alt="Language" src={Nature} />}
+                  avatar={<Avatar alt="Nature" src={Nature} />}
                   label="Nature"
                   variant="outlined"
                   sx={{
