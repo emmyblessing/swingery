@@ -26,4 +26,4 @@ const BackIcon = ({ navigation }) => {
 	)
 }
 
-export default BackIcon
+export default BackIcon;
