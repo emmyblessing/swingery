@@ -1,5 +1,5 @@
 import React from 'react'
-import Swingery from '../../assets/img/Swingery-light1.png'
+import Swingery from '../../assets/img/Swingery-Logo-Small.png';
 import { Box, Link, Typography } from '@mui/material';
 import Button from '../Button';
 import ButtonOutline from '../ButtonOutline';

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Link } from '@mui/material';
-import SwingeryThumb from '../../assets/img/Swinxter_Thumbler3.png'
+import SwingeryThumb from '../../assets/img/SwingeryLogo.png';
 
 
 const OnBoard = () => {
