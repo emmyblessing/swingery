@@ -15,6 +15,7 @@ import Gender from './pages/Gender';
 import Looking from './pages/Looking';
 import Dashboard from './pages/Dashboard';
 import Chats from './pages/Chats';
+import Settings from './pages/settings';
 
 
 function App() {
@@ -33,6 +34,7 @@ function App() {
           <Route path="/looking" element={<Looking />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chats" element={<Chats />} />
+          <Route path="/settings" element={<Settings />} />
         </Routes>
       </Router>
     </div>

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Box, Link } from '@mui/material';
-import Swingery from '../../assets/img/Swingery-light1.png'
+import Swingery from '../../assets/img/SwingeryLogo.png'
 
 
 const Home = () => {

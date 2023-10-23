@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Link, Typography } from '@mui/material';
 import Button from '../Button';
-import SwingerySmall from '../../assets/img/Swingery-small.png'
+import SwingerySmall from '../../assets/img/Swingery-Logo-Small.png'
 import Google from '../../assets/img/google.png';
 import Facebook from '../../assets/img/facebook.png';
 import Apple from '../../assets/img/apple.png';

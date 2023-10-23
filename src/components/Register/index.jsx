@@ -1,7 +1,7 @@
 import React from 'react'
 import { Box, Link, Typography } from '@mui/material';
 import Button from '../Button';
-import SwingerySmall from '../../assets/img/Swingery-small.png'
+import SwingerySmall from '../../assets/img/Swingery-Logo-Small.png'
 import FormInputField from '../FormInput/FormInputField';
 import PasswordField from '../FormInput/PasswordField';
 import FormControlLabel from '@mui/material/FormControlLabel';

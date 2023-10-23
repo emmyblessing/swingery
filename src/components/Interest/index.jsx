@@ -4,7 +4,7 @@ import Button from '../Button';
 import FormInputField from '../FormInput/FormInputField';
 import Avatar from '@mui/material/Avatar';
 import Chip from '@mui/material/Chip';
-import SwingerySmall from '../../assets/img/Swingery-small.png';
+import SwingerySmall from '../../assets/img/Swingery-Logo-Small.png';
 import Football from '../../assets/img/football.png';
 import Language from '../../assets/img/language.png';
 import Nature from '../../assets/img/nature.png';
