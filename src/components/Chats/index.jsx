@@ -1,10 +1,15 @@
 import React from 'react'
-import { Avatar, Box, Divider, List, ListItem, ListItemAvatar, ListItemText } from '@mui/material';
+import { Avatar, Box, Button, Divider, Link, List, ListItem, ListItemAvatar, ListItemButton, ListItemIcon, ListItemText } from '@mui/material';
 import BackIcon from '../Back';
 import { styled } from '@mui/material/styles';
 import Badge from '@mui/material/Badge';
 import UserNine from '../../assets/img/Ellipse 66.png';
 import ChatField from '../FormInput/ChatField';
+import { Global } from '@emotion/react';
+import CssBaseline from '@mui/material/CssBaseline';
+import { grey } from '@mui/material/colors';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import { Image, InsertDriveFile, MusicNote, SmartDisplay } from '@mui/icons-material';
 
 const Encrypt = (
   <svg xmlns="http://www.w3.org/2000/svg" width="9" height="15" viewBox="0 0 9 15" fill="none">
@@ -28,6 +33,18 @@ const Send = (
     <path d="M23.6954 0.291234C23.5604 0.156908 23.3899 0.0639048 23.2039 0.0231609C23.0179 -0.0175829 22.8241 -0.00437409 22.6454 0.0612345L0.645352 8.06123C0.45562 8.1332 0.292272 8.26118 0.177003 8.42819C0.0617345 8.59519 0 8.79331 0 8.99623C0 9.19916 0.0617345 9.39728 0.177003 9.56428C0.292272 9.73128 0.45562 9.85927 0.645352 9.93123L9.23535 13.3612L15.5754 7.00123L16.9854 8.41123L10.6154 14.7812L14.0554 23.3712C14.1295 23.5573 14.2577 23.7168 14.4235 23.8292C14.5894 23.9415 14.7851 24.0014 14.9854 24.0012C15.1874 23.9971 15.3835 23.9318 15.5478 23.814C15.712 23.6962 15.8367 23.5313 15.9054 23.3412L23.9054 1.34123C23.9735 1.16431 23.9899 0.971665 23.9527 0.785758C23.9156 0.599851 23.8263 0.428345 23.6954 0.291234Z" fill="#9F0000"/>
   </svg>
 )
+
+const drawerBleeding = 0;
+
+const Root = styled('div')(({ theme }) => ({
+  height: '100%',
+  backgroundColor:
+    theme.palette.mode === 'light' ? grey[100] : theme.palette.background.default,
+}));
+
+const StyledBox = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
+}));
 
 const StyledBadge = styled(Badge)(({ theme }) => ({
   '& .MuiBadge-badge': {
@@ -59,6 +76,12 @@ const StyledBadge = styled(Badge)(({ theme }) => ({
 }));
 
 const ChatsPage = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
   return (
     <div>
       <Box mt={1}>
@@ -181,7 +204,9 @@ const ChatsPage = () => {
         }}>
           <Box mr={2}>
             <Box>
-              { Add }
+              <button className='px-0 py-2 bg-inherit m-0 border-none' onClick={toggleDrawer(true)}>
+                { Add }
+              </button>
             </Box>
           </Box>
           <Box mr={4} sx={{ width: '100%' }}>
@@ -192,6 +217,128 @@ const ChatsPage = () => {
           </Box>
         </Box>
       </Box>
+
+      <Root>
+        <CssBaseline />
+        <Global
+          styles={{
+            '.MuiDrawer-root > .MuiPaper-root': {
+              height: `calc(34% - ${drawerBleeding}px)`,
+              overflow: 'visible',
+            },
+          }}
+        />
+        <SwipeableDrawer
+          anchor="bottom"
+          open={open}
+          onClose={toggleDrawer(false)}
+          onOpen={toggleDrawer(true)}
+          swipeAreaWidth={drawerBleeding}
+          disableSwipeToOpen={false}
+          ModalProps={{
+            keepMounted: true,
+          }}
+        >
+          <StyledBox
+            sx={{
+              position: 'absolute',
+              top: -20,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+              visibility: 'visible',
+              right: 0,
+              left: 0,
+            }}
+          >
+            <Box mt={3} ml={2}>
+              <List>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <Image sx={{
+                        textAlign: 'center',
+                        color: '#ffffff',
+                        width: '27px',
+                        height: '27px',
+                        padding: '4px',
+                        borderRadius: '8px',
+                        background: '#9F0000',
+                      }} />
+                    </ListItemIcon>
+                    <Link href="/" sx={{textDecoration: 'none', color: '#000'}}>
+                      <ListItemText primary="Send Image" primaryTypographyProps={{
+                        fontSize: '16px',
+                        fontWeight: 'medium',
+                        letterSpacing: 0,
+                      }} />
+                    </Link>
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <SmartDisplay sx={{
+                        textAlign: 'center',
+                        color: '#ffffff',
+                        width: '27px',
+                        height: '27px',
+                        padding: '4px',
+                        borderRadius: '8px',
+                        background: '#5FD772',
+                      }} />
+                    </ListItemIcon>
+                    <ListItemText primary="Send Video" primaryTypographyProps={{
+                      fontSize: '16px',
+                      fontWeight: 'medium',
+                      letterSpacing: 0,
+                    }} />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <MusicNote sx={{
+                        textAlign: 'center',
+                        color: '#ffffff',
+                        width: '27px',
+                        height: '27px',
+                        padding: '4px',
+                        borderRadius: '8px',
+                        background: '#DD88CF',
+                      }} />
+                    </ListItemIcon>
+                    <ListItemText primary="Send Audio" primaryTypographyProps={{
+                      fontSize: '16px',
+                      fontWeight: 'medium',
+                      letterSpacing: 0,
+                    }} />
+                  </ListItemButton>
+                </ListItem>
+                <ListItem disablePadding>
+                  <ListItemButton>
+                    <ListItemIcon>
+                      <InsertDriveFile sx={{
+                        textAlign: 'center',
+                        color: '#ffffff',
+                        width: '27px',
+                        height: '27px',
+                        padding: '4px',
+                        borderRadius: '8px',
+                        background: '#4595FF',
+                      }} />
+                    </ListItemIcon>
+                    <ListItemText primary="Send Document" primaryTypographyProps={{
+                      fontSize: '16px',
+                      fontWeight: 'medium',
+                      letterSpacing: 0,
+                    }} />
+                  </ListItemButton>
+                </ListItem>
+              </List>
+            </Box>
+          </StyledBox>
+        </SwipeableDrawer>
+      </Root>
     </div>
   )
 }

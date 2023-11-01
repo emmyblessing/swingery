@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { Input as BaseInput } from '@mui/base/Input';
+import { TextareaAutosize } from '@mui/base/TextareaAutosize';
 import { styled } from '@mui/system';
 import {
 	red,
@@ -9,16 +10,31 @@ import {
 } from '../../assets/js/customStyles'
 
 const Input = React.forwardRef(function CustomInput(props, ref) {
-  return <BaseInput slots={{ input: InputElement }} {...props} ref={ref} />;
+  return (
+    <BaseInput
+      slots={{
+        root: RootDiv,
+        input: 'input',
+        textarea: TextareaElement,
+      }}
+      {...props}
+      ref={ref}
+    />
+  );
 });
 
-export default function FormInputField({ placeholder, name, ...props }) {
+export default function TextAreaField({ placeholder, name}) {
   return <>
-		<Input placeholder={placeholder} name={name}	{...props} />
+		<Input aria-label="Demo input" multiline placeholder={placeholder} name={name}	 />
 	</>
 }
 
-const InputElement = styled('input')(
+const RootDiv = styled('div')`
+  display: flex;
+  max-width: 100%;
+`;
+
+const TextareaElement = styled(TextareaAutosize)(
 	({ theme }) => `
 	width: 295px;
 	font-size: 16px;

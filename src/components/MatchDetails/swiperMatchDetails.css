@@ -1,0 +1,16 @@
+.myswiper2 {
+  width: 312px;
+  height: 417px;
+}
+
+.myswiper-slide2 {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+
+  /* Center slide text vertically */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+

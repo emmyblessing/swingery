@@ -16,6 +16,8 @@ import Looking from './pages/Looking';
 import Dashboard from './pages/Dashboard';
 import Chats from './pages/Chats';
 import Settings from './pages/settings';
+import ProfileSettingsPage from './components/ProfileSettings';
+import MatchDetails from './pages/MatchDetails';
 
 
 function App() {
@@ -35,6 +37,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/chats" element={<Chats />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/profileSettings" element={<ProfileSettingsPage />} />
+          <Route path="/matchDetails" element={<MatchDetails />} />
         </Routes>
       </Router>
     </div>
