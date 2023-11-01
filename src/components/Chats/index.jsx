@@ -242,7 +242,7 @@ const ChatsPage = () => {
           <StyledBox
             sx={{
               position: 'absolute',
-              top: -20,
+              top: -10,
               borderTopLeftRadius: 20,
               borderTopRightRadius: 20,
               visibility: 'visible',
