@@ -107,7 +107,7 @@ const VerifyPage = () => {
 						fontSize: '18px',
 						color: '#9F0000',
 					}}>
-						Next
+						.
 					</Link>
 				</Box>
 			</Box>

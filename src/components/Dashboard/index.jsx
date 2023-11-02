@@ -72,7 +72,7 @@ export default function DashboardPage() {
         </Box>
       </TabPanel>
       
-      <Paper sx={{ zIndex:'99999', position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>  
+      <Paper sx={{ zIndex:'10', position: 'fixed', bottom: 0, left: 0, right: 0 }} elevation={3}>  
         <TabsList>
           <Tab value={1}>{vectorOne}</Tab>
           <Tab value={2}>{vectorTwo}</Tab>

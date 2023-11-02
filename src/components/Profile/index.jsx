@@ -7,8 +7,34 @@ import Language from '../../assets/img/language.png';
 import Nature from '../../assets/img/nature.png';
 import Photography from '../../assets/img/photography.png';
 import Writing from '../../assets/img/writing.png';
+import LogoutImage from '../../assets/img/Group.png';
+import { styled } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
+import { Global } from '@emotion/react';
+import CssBaseline from '@mui/material/CssBaseline';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Button from '../Button';
+
+
+const drawerBleeding = 0;
+
+const Root = styled('div')(({ theme }) => ({
+  height: '100%',
+  backgroundColor:
+    theme.palette.mode === 'light' ? grey[100] : theme.palette.background.default,
+}));
+
+const StyledBox = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
+}));
 
 const Profile = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
   return (
     <div>
       <Box mt={2} mb={6}>
@@ -53,7 +79,7 @@ const Profile = () => {
               <span className='text-base text-[rgba(41, 37, 46, 0.33)]'>@johndoe</span>
             </div>
             <div>
-              <Link href="/">
+              <Link href="/profileSettings">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none">
                   <circle cx="15" cy="15" r="15" transform="rotate(90 15 15)" fill="#CCCCCC" fillOpacity="0.6"/>
                   <path d="M16.4686 10.0788L19.9152 13.5254L12.8767 20.5648C12.6974 20.7439 12.4814 20.8819 12.2436 20.9694L12.0991 21.0158L8.54827 21.9843C8.47949 22.0032 8.40712 22.0051 8.33745 21.9897C8.26779 21.9743 8.20295 21.9421 8.14856 21.8959C8.09418 21.8497 8.05191 21.791 8.02543 21.7247C7.99894 21.6585 7.98905 21.5868 7.9966 21.5158L8.01061 21.4458L8.9791 17.8958C9.04565 17.6506 9.16474 17.423 9.32761 17.2303L9.43006 17.1182L16.4686 10.0779V10.0788ZM17.8417 8.70664C18.2886 8.26052 18.8912 8.00529 19.5226 7.99473C20.154 7.98416 20.7648 8.2191 21.2264 8.65003C21.688 9.08096 21.9642 9.67423 21.997 10.3049C22.0298 10.9355 21.8165 11.5542 21.4021 12.0307L21.2883 12.1532L20.5343 12.9063L17.0877 9.45971L17.8417 8.70664Z" fill="black" fill-opacity="0.32"/>
@@ -198,7 +224,7 @@ const Profile = () => {
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={toggleDrawer(true)}>
                 <ListItemIcon>
                   <Logout sx={{
                     textAlign: 'center',
@@ -220,6 +246,53 @@ const Profile = () => {
           </List>
         </Box>
       </Box>
+      <Root>
+        <CssBaseline />
+        <Global
+          styles={{
+            '.MuiDrawer-root > .MuiPaper-root': {
+              height: `calc(50% - ${drawerBleeding}px)`,
+              overflow: 'visible',
+            },
+          }}
+        />
+        <SwipeableDrawer
+          anchor="bottom"
+          open={open}
+          onClose={toggleDrawer(false)}
+          onOpen={toggleDrawer(true)}
+          swipeAreaWidth={drawerBleeding}
+          disableSwipeToOpen={false}
+          ModalProps={{
+            keepMounted: true,
+          }}
+        >
+          <StyledBox
+            sx={{
+              position: 'absolute',
+              top: -10,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+              visibility: 'visible',
+              right: 0,
+              left: 0,
+            }}
+          >
+            <Box mt={3} sx={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}>
+              <div className='text-center'>
+                <img src={LogoutImage} alt='Sign out' />
+                <p className="leading-none font-semibold text-[22px]">Are you sure?</p>
+                <p className='leading-2'>Do you want to sign out from the <br /> account?</p>
+                <Button size="320px" label="Yes, Sure" type="submit"/>
+              </div>
+
+            </Box>
+          </StyledBox>
+        </SwipeableDrawer>
+      </Root>
     </div>
   )
 }

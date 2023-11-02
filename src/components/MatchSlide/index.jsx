@@ -10,6 +10,7 @@ import MatchTwo from '../../assets/img/Rectangle 16.png';
 import MatchThree from '../../assets/img/Rectangle 18.png';
 import MatchFour from '../../assets/img/Rectangle 18.png';
 import IconLayer from '../IconLayer';
+import { Link } from '@mui/material';
 
 const MatchSlide = () => {
   return (
@@ -26,7 +27,9 @@ const MatchSlide = () => {
         >
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchOne} alt='Match One'/>
+            <Link href="/matchDetails">
+              <img src={MatchOne} alt='Match One'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
@@ -46,7 +49,9 @@ const MatchSlide = () => {
         </SwiperSlide>
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchTwo} alt='Match Two'/>
+            <Link href="/matchDetails">
+              <img src={MatchTwo} alt='Match Two'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
@@ -66,7 +71,9 @@ const MatchSlide = () => {
         </SwiperSlide>
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchThree} alt='Match Three'/>
+            <Link href="/matchDetails">
+              <img src={MatchThree} alt='Match Three'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
@@ -86,7 +93,9 @@ const MatchSlide = () => {
         </SwiperSlide>
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchFour} alt='Match Four'/>
+            <Link href="/matchDetails">
+              <img src={MatchFour} alt='Match Four'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
@@ -106,7 +115,9 @@ const MatchSlide = () => {
         </SwiperSlide>
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchTwo} alt='Match Two'/>
+            <Link href="/matchDetails">
+              <img src={MatchTwo} alt='Match Two'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
@@ -126,7 +137,9 @@ const MatchSlide = () => {
         </SwiperSlide>
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchThree} alt='Match Three'/>
+            <Link href="/matchDetails">
+              <img src={MatchThree} alt='Match Three'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
@@ -146,7 +159,9 @@ const MatchSlide = () => {
         </SwiperSlide>
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchFour} alt='Match Four'/>
+            <Link href="/matchDetails">
+              <img src={MatchFour} alt='Match Four'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
@@ -166,7 +181,9 @@ const MatchSlide = () => {
         </SwiperSlide>
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchOne} alt='Match One'/>
+            <Link href="/matchDetails">
+              <img src={MatchOne} alt='Match One'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
@@ -186,7 +203,9 @@ const MatchSlide = () => {
         </SwiperSlide>
         <SwiperSlide className="mySwiper-slide">
           <div className='relative'>
-            <img src={MatchTwo} alt='Match Two'/>
+            <Link href="/matchDetails">
+              <img src={MatchTwo} alt='Match Two'/>
+            </Link>
             <div className='flex justify-center'>
               <div className='absolute bg-[#9F0000] text-center top-[-10px] text-sm px-5 rounded-b-3xl'>
                 <p className='font-bold mb-[4px]'>70% Match</p>
