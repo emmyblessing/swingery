@@ -7,8 +7,34 @@ import Language from '../../assets/img/language.png';
 import Nature from '../../assets/img/nature.png';
 import Photography from '../../assets/img/photography.png';
 import Writing from '../../assets/img/writing.png';
+import LogoutImage from '../../assets/img/Group.png';
+import { styled } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
+import { Global } from '@emotion/react';
+import CssBaseline from '@mui/material/CssBaseline';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import Button from '../Button';
+
+
+const drawerBleeding = 0;
+
+const Root = styled('div')(({ theme }) => ({
+  height: '100%',
+  backgroundColor:
+    theme.palette.mode === 'light' ? grey[100] : theme.palette.background.default,
+}));
+
+const StyledBox = styled(Box)(({ theme }) => ({
+  backgroundColor: theme.palette.mode === 'light' ? '#fff' : grey[800],
+}));
 
 const Profile = () => {
+  const [open, setOpen] = React.useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
   return (
     <div>
       <Box mt={2} mb={6}>
@@ -198,7 +224,7 @@ const Profile = () => {
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
-              <ListItemButton>
+              <ListItemButton onClick={toggleDrawer(true)}>
                 <ListItemIcon>
                   <Logout sx={{
                     textAlign: 'center',
@@ -220,6 +246,53 @@ const Profile = () => {
           </List>
         </Box>
       </Box>
+      <Root>
+        <CssBaseline />
+        <Global
+          styles={{
+            '.MuiDrawer-root > .MuiPaper-root': {
+              height: `calc(50% - ${drawerBleeding}px)`,
+              overflow: 'visible',
+            },
+          }}
+        />
+        <SwipeableDrawer
+          anchor="bottom"
+          open={open}
+          onClose={toggleDrawer(false)}
+          onOpen={toggleDrawer(true)}
+          swipeAreaWidth={drawerBleeding}
+          disableSwipeToOpen={false}
+          ModalProps={{
+            keepMounted: true,
+          }}
+        >
+          <StyledBox
+            sx={{
+              position: 'absolute',
+              top: -10,
+              borderTopLeftRadius: 20,
+              borderTopRightRadius: 20,
+              visibility: 'visible',
+              right: 0,
+              left: 0,
+            }}
+          >
+            <Box mt={3} sx={{
+              display: 'flex',
+              justifyContent: 'center',
+            }}>
+              <div className='text-center'>
+                <img src={LogoutImage} alt='Sign out' />
+                <p className="leading-none font-semibold text-[22px]">Are you sure?</p>
+                <p className='leading-2'>Do you want to sign out from the <br /> account?</p>
+                <Button size="320px" label="Yes, Sure" type="submit"/>
+              </div>
+
+            </Box>
+          </StyledBox>
+        </SwipeableDrawer>
+      </Root>
     </div>
   )
 }
